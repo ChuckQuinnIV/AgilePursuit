@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "category": 1,
+      "type": "multiple",
+      "question": "On average, how long does a cat sleep everyday",
+      "choices": {
+        "10-12 Hours": false,
+        "5-10 Hours": false,
+        "20-24 Hours": false,
+        "12-16 Hours": true
+      }
+    },
+        {
+      "id": "2",
+      "category": 1,
+      "type": "multiple",
+      "question": "In what country is Alfa Romeo headquartered?",
+      "choices": {
+        "France": false,
+        "Germany": false,
+        "U.K.": false,
+        "Italy": true
+      }
+    }
+  ]
+}
