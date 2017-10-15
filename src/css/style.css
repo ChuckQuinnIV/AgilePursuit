@@ -1,0 +1,50 @@
+.root {
+    -fx-background-color: #EEE;
+}
+.label {
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+#a-grid {
+    -fx-padding: 25;
+}
+.teamName {
+    -fx-font-size:25;
+}
+#mainTitle {
+    -fx-font-size:50;
+    -fx-font-weight:700;
+}
+#timer {
+    -fx-progress-color: teal;
+    
+}
+#topBox {
+    -fx-stroke: BLACK;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+.answerRegion {
+    -fx-padding:15,35,15,35;
+}
+.q-btn {
+    -fx-font-size: 30;
+}
+.categoryLabel {
+    -fx-font-size: 25;
+}
+.answerFill .box {
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:3px;
+}
+.answerFill:selected .mark {
+    -fx-background-color: #FFF;
+}
+.answerFill:selected .box {
+    -fx-background-color: #0000ff;
+}
+#answer-header {
+    -fx-font-size:40;
+    -fx-font-weight: 700;
+}

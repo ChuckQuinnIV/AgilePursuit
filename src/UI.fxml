@@ -3,12 +3,122 @@
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
+            stylesheets="css/style.css"
+            fx:controller="UIController" >
+    <top>
+        <HBox id="topBox" alignment="TOP_CENTER">
+            <Text id="mainTitle" textAlignment="CENTER">
+                AGILE TRIVIAL PURSUIT
+            </Text>
+        </HBox>
+    </top>
+    <!--Team 1 area-->
+    <left>
+        <VBox id="leftBox"  styleClass="answerRegion" alignment="TOP_CENTER">
+            <Text styleClass="teamName" textAlignment="CENTER">Team Name</Text>
+            <GridPane id="team1-response"
+                      prefHeight="300.0" prefWidth="100.0" hgap="10" vgap="10" alignment="TOP_CENTER">
+                <!--Category 1-->
+                <Text GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 1</Text>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 2-->
+                <Text GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 2</Text>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 3-->
+                <Text GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 3</Text>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 4-->
+                <Text GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 4</Text>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 5-->
+                <Text GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Random</Text>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+            </GridPane>
+        </VBox>
+    </left>
+    <!--Team 2 area-->
+    <right>
+        <VBox id="rightBox" styleClass="answerRegion" alignment="TOP_CENTER">
+            <Text styleClass="teamName" textAlignment="CENTER">Team WOOHOO</Text>
+            <GridPane id="team2-response"
+                      prefHeight="300.0" prefWidth="100.0" hgap="10" vgap="10" alignment="TOP_CENTER">
+                <!--Category 1-->
+                <Text GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 1</Text>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="1" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 2-->
+                <Text GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 2</Text>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 3-->
+                <Text GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 3</Text>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 4-->
+                <Text GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Category 4</Text>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <!--Category 5-->
+                <Text GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="1" styleClass="categoryLabel">Random</Text>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+                <CheckBox GridPane.rowIndex="5" GridPane.columnIndex="3" GridPane.columnSpan="1" styleClass="answerFill"></CheckBox>
+            </GridPane>
+            <!--Progress sets it, otherwise it shows essentially a loading icon. Can make dynamic if showing exact time keeping is important-->
+            <!--<ProgressIndicator progress="0.6" prefWidth="100" prefHeight="100"/>-->
+        </VBox>
+    </right>
+    <center>
+        <GridPane id="selectCategory"
+                  prefHeight="500.0" prefWidth="300.0" hgap="10" vgap="10" alignment="CENTER">
+            <ListView>
+                <Text>Test 0</Text>
+                <Text>Test 1</Text>
+                <Text>Test 2</Text>
+            </ListView>
+        </GridPane>
 
-</AnchorPane>
+    </center>
+    <bottom>
+        <GridPane
+                id="a-grid"
+                prefHeight="200.0" prefWidth="1000.0" hgap="10" vgap="10" alignment="BASELINE_LEFT">
+
+
+            <Text GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3" id="answer-header" textAlignment="CENTER">What is the Agile Model?</Text>
+
+            <Button text="Answer 1" onAction="#setResponse" fx:id="button1" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Answer 2" onAction="#setResponse" fx:id="button2" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="500"/>
+            <Button text="Answer 3" onAction="#setResponse" fx:id="button3" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Answer 4" onAction="#setResponse" fx:id="button4" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="500"/>
+
+            <Label GridPane.rowIndex="1" fx:id="testResponse" />
+            <!--Progress sets it, otherwise it shows essentially a loading icon. Can make dynamic if showing exact time keeping is important. progress:0.6-->
+            <ProgressIndicator id="timer" prefWidth="100" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="2"/>
+        </GridPane>
+    </bottom>
+
+</BorderPane>
+
+
