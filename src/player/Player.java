@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Player {
 	
-	int id = 0;
-	String username = "";
-	ArrayList<String> groups = new ArrayList<String>();
-	int gamesWon = 0;
-	int gamesTotal = 0;
+	private int id = 0;
+	private String username = "";
+	private ArrayList<String> groups = new ArrayList<String>();
+	private int gamesWon = 0;
+	private int gamesTotal = 0;
 	
 	public Player(int InId, String InUsername, ArrayList<String> InGroups, int InGamesWon, int InGamesTotal) {
 		id = InId;
