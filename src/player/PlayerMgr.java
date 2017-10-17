@@ -1,26 +1,26 @@
 package player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import questions.Question;
 
 public class PlayerMgr {
 	
-	private ArrayList<Player> allPlayers = new ArrayList<Player>();;
+	private HashMap<Integer,Player> allPlayers = new HashMap<Integer,Player>();
 	
 	
 	@Override
 	public String toString() {
-		String s = "";
-		for (Player p : allPlayers) {
-			s += p.toString() + " \n";
-		}
-		return s;
+		return allPlayers.toString();
+	
 	}
 
-
 	public void addPlayer(Player n){
-		allPlayers.add(n);
+		int id = n.getId();
+		Player value = allPlayers.get(id);
+		if (value != null) { throw new IllegalArgumentException(id + " is already in the all Players hashmap");}
+		allPlayers.put(n.getId(), n);
 	}
 
 	
