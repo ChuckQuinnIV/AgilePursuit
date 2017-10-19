@@ -1,8 +1,9 @@
 package player;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Serializable {
 	
 	private int id = 0;
 	private String username = "";
