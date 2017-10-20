@@ -25,10 +25,17 @@ public class PlayerMgr implements Serializable{
 		allPlayers.put(n.getId(), n);
 	}
 	
-	public void setHash(HashMap<Integer, Player> hash) {
-		allPlayers = hash;
+	public boolean containsPlayer(int id){
+		return allPlayers.containsKey(id);
 	}
 	
+	public Player getPlayer(int id){
+		if (allPlayers.containsKey(id)){
+			return allPlayers.get(id);
+		}else{
+			throw new IllegalArgumentException(id + " is not in the all Players hashmap");
+		}
+	}
 	
 	public HashMap<Integer, Player> getHash() {
 		return allPlayers;
@@ -38,6 +45,14 @@ public class PlayerMgr implements Serializable{
 		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
 			os.writeObject(allPlayers);
 		}
+	}
+	// TODO: WE NEED TO REMOVE THIS LATER!!!!!!!! 
+	public void clear() {
+		allPlayers.clear();
+	}
+	
+	public void deletePlayer(int id) {
+		allPlayers.remove(id);
 	}
 	
 	@SuppressWarnings("unchecked")
