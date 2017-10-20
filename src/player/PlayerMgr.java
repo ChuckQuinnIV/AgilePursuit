@@ -2,6 +2,7 @@ package player;
 
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -9,25 +10,13 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
-
-
-
-
 public class PlayerMgr implements Serializable{
 		
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-
-	private HashMap<Integer,Player> allPlayers = new HashMap<Integer,Player>();
-	
+	private HashMap<Integer,Player> allPlayers = readFile();
 	private static final String PATH = "./src/player/players.ser";
+	//TODO: manage username and display/actual  name ?  
 	
-	@Override
-	public String toString() {
-		return allPlayers.toString();
-	}
 
 	public void addPlayer(Player n){
 		int id = n.getId();
@@ -45,15 +34,29 @@ public class PlayerMgr implements Serializable{
 		return allPlayers;
 	}
 	
-	public void saveFile () throws IOException {
+	public void saveFile() throws IOException {
 		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
 			os.writeObject(allPlayers);
 		}
 	}
 	
-	public HashMap<Integer, Player> readFile() throws ClassNotFoundException, IOException {
+	@SuppressWarnings("unchecked")
+	private HashMap<Integer, Player> readFile()  {
 		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
 			return (HashMap<Integer, Player>) is.readObject();
+		} catch (FileNotFoundException e) {
+			return new HashMap<Integer,Player>();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 		}
+		return null;
 	}
+	
+	@Override
+	public String toString() {
+		return allPlayers.toString();
+	}
+	
 }
