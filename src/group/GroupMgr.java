@@ -38,7 +38,7 @@ public class GroupMgr implements Serializable{
 		}
 	}
 	
-	public HashMap<String, Group> getHashMap() {
+	public HashMap<String, Group> getAllGroups() {
 		return allGroups;
 	}
 	
