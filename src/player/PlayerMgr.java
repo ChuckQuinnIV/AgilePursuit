@@ -37,7 +37,7 @@ public class PlayerMgr implements Serializable{
 		}
 	}
 	
-	public HashMap<Integer, Player> getHash() {
+	public HashMap<Integer, Player> getAllPlayers() {
 		return allPlayers;
 	}
 	
