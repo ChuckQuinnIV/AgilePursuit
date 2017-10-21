@@ -9,14 +9,12 @@ public class Group implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String groupId = "";
 	private	String groupName = "";
 	private int gamesWon = 0;
 	private int gamesTotal = 0;
 	private ArrayList<Player> players = new ArrayList<Player>();
 	
-	public Group(String InGroupId, String InGroupName, int InGamesWon, int InGamesTotal, ArrayList<Player> InPlayers) {
-		groupId = InGroupId;
+	public Group(String InGroupName, int InGamesWon, int InGamesTotal, ArrayList<Player> InPlayers) {
 		groupName = InGroupName;
 		gamesWon = InGamesWon;
 		gamesTotal = InGamesTotal;
@@ -25,16 +23,8 @@ public class Group implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Group [groupId=" + groupId + ", groupName=" + groupName + ", gamesWon=" + gamesWon + ", gamesTotal="
+		return "Group [groupName=" + groupName + ", gamesWon=" + gamesWon + ", gamesTotal="
 				+ gamesTotal + ", players=" + players + "]";
-	}
-
-	public String getGroupId() {
-		return groupId;
-	}
-
-	public void setGroupId(String groupId) {
-		this.groupId = groupId;
 	}
 
 	public String getGroupName() {

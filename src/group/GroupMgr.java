@@ -20,10 +20,10 @@ public class GroupMgr implements Serializable{
 	
 	
 	public void addGroup(Group n){
-		String id = n.getGroupId();
-		Group value = allGroups.get(id);
-		if(value != null) { throw new IllegalArgumentException(id + " is already in the Group hashmap");}
-		allGroups.put(n.getGroupId(), n);
+		String name = n.getGroupName();
+		Group value = allGroups.get(name);
+		if(value != null) { throw new IllegalArgumentException(name + " is already in the Group hashmap");}
+		allGroups.put(name, n);
 	}
 	
 	public boolean containsGroup(String id) {
@@ -76,10 +76,10 @@ public class GroupMgr implements Serializable{
 		return allGroups.toString();
 	}
 
-	public void addPlayer(Player p, Group g) {
-		g.addPlayer(p);
+	public void addPlayer(Player p, String groupname) {
+		allGroups.get(groupname).addPlayer(p);
 		//just for testing purposes
-		System.out.println("\nPlayer " + p.getUsername() + "added to " + g.getGroupName());
+		System.out.println("\nPlayer " + p.getUsername() + "added to " + allGroups.get(groupname).getGroupName());
 	}
 }
 
