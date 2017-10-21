@@ -5,14 +5,12 @@ import java.util.ArrayList;
 
 public class Player implements Serializable {
 	
-	private int id = 0;
 	private String username = "";
 	private ArrayList<String> groups = new ArrayList<String>();
 	private int gamesWon = 0;
 	private int gamesTotal = 0;
 	
-	public Player(int InId, String InUsername, ArrayList<String> InGroups, int InGamesWon, int InGamesTotal) {
-		id = InId;
+	public Player(String InUsername, ArrayList<String> InGroups, int InGamesWon, int InGamesTotal) {
 		username = InUsername;
 		groups = InGroups;
 		gamesWon = InGamesWon;
@@ -21,7 +19,7 @@ public class Player implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Player [id=" + id + ", username=" + username + ", groups=" + groups + ", gamesWon=" + gamesWon
+		return "Player [username=" + username + ", groups=" + groups + ", gamesWon=" + gamesWon
 				+ ", gamesTotal=" + gamesTotal + "]";
 	}
 
@@ -33,9 +31,6 @@ public class Player implements Serializable {
 		this.username = username;
 	}
 
-	public int getId() {
-		return id;
-	}
 
 	public ArrayList<String> getGroups() {
 		return groups;
