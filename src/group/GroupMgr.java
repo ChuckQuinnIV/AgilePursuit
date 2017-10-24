@@ -76,10 +76,10 @@ public class GroupMgr implements Serializable{
 		return allGroups.toString();
 	}
 
-	public void addPlayer(Player p, String groupname) {
+	public void addPlayer(String p, String groupname) {
 		allGroups.get(groupname).addPlayer(p);
 		//just for testing purposes
-		System.out.println("\nPlayer " + p.getUsername() + "added to " + allGroups.get(groupname).getGroupName());
+		System.out.println("\nPlayer " + p + "added to " + allGroups.get(groupname).getGroupName());
 	}
 }
 

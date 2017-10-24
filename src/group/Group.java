@@ -12,19 +12,15 @@ public class Group implements Serializable {
 	private	String groupName = "";
 	private int gamesWon = 0;
 	private int gamesTotal = 0;
-	private ArrayList<Player> players = new ArrayList<Player>();
+	private ArrayList<String> players = new ArrayList<String>();
 	
-	public Group(String InGroupName, int InGamesWon, int InGamesTotal, ArrayList<Player> InPlayers) {
+	public Group(String InGroupName) {
 		groupName = InGroupName;
-		gamesWon = InGamesWon;
-		gamesTotal = InGamesTotal;
-		players = InPlayers;
 	}
 	
 	@Override
 	public String toString() {
-		return "Group [groupName=" + groupName + ", gamesWon=" + gamesWon + ", gamesTotal="
-				+ gamesTotal + ", players=" + players + "]";
+		return "Group [groupName=" + groupName + ", gamesWon=" + gamesWon + ", gamesTotal=" + gamesTotal + ", players=" + players + "]";
 	}
 
 	public String getGroupName() {
@@ -51,15 +47,11 @@ public class Group implements Serializable {
 		this.gamesTotal = gamesTotal;
 	}
 
-	public ArrayList<Player> getPlayers() {
+	public ArrayList<String> getPlayers() {
 		return players;
 	}
-
-	public void setPlayers(ArrayList<Player> players) {
-		this.players = players;
-	}
 	
-	public void addPlayer(Player p) {
+	public void addPlayer(String p) {
 		players.add(p);
 	}
 	
