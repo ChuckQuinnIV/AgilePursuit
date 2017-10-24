@@ -30,7 +30,7 @@
 		{
 			"category": 2,
 			"type": "multiple",
-			"question": " Who developed the general theory of relativity?",
+			"question": "Who developed the general theory of relativity?",
 			"choices": 
 			{
 				"Thomas Edison": false,
