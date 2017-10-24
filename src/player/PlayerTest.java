@@ -18,14 +18,14 @@ public class PlayerTest {
 		PlayerManager.clear();
 		System.out.println(PlayerManager.toString());
 				
-		Player p1 = new Player("nstanley", new ArrayList<String>(), 1,5);
+		Player p1 = new Player("nstanley");
 		PlayerManager.addPlayer(p1);
-		Player p2 = new Player("aeinstein", new ArrayList<String>(), 5,5);
+		Player p2 = new Player("aeinstein");
 		PlayerManager.addPlayer(p2);
-		Player p3 = new Player("cdarwin", new ArrayList<String>(), 3,5);
+		Player p3 = new Player("cdarwin");
 		PlayerManager.addPlayer(p3);
 		PlayerManager.saveFile();
-		Player p4 = new Player("testName", new ArrayList<String>(), 4,6);
+		Player p4 = new Player("testName");
 		PlayerManager.addPlayer(p4);
 		PlayerManager.saveFile();
 		System.out.println(PlayerManager.toString());

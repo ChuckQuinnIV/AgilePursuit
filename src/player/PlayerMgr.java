@@ -28,11 +28,11 @@ public class PlayerMgr implements Serializable{
 		return allPlayers.containsKey(username);
 	}
 	
-	public Player getPlayer(int id){
-		if (allPlayers.containsKey(id)){
-			return allPlayers.get(id);
+	public Player getPlayer(String username){
+		if (allPlayers.containsKey(username)){
+			return allPlayers.get(username);
 		}else{
-			throw new IllegalArgumentException(id + " is not in the all Players hashmap");
+			throw new IllegalArgumentException(username + " is not in the all Players hashmap");
 		}
 	}
 	

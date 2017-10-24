@@ -10,11 +10,8 @@ public class Player implements Serializable {
 	private int gamesWon = 0;
 	private int gamesTotal = 0;
 	
-	public Player(String InUsername, ArrayList<String> InGroups, int InGamesWon, int InGamesTotal) {
+	public Player(String InUsername) {
 		username = InUsername;
-		groups = InGroups;
-		gamesWon = InGamesWon;
-		gamesTotal = InGamesTotal;
 	}
 
 	@Override
