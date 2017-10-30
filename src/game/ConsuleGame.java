@@ -105,6 +105,7 @@ public class ConsuleGame {
 
 	}
 
+	// Needs to connect to current UIController
 	public static void playGame() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Group1's Name: ");
@@ -134,6 +135,7 @@ public class ConsuleGame {
 
 	}
 
+	// This needs to connect with a separate controller and GUI
 	public static void playGameConsule() throws IOException{
 
 		System.out.println("****** Welcome to Agile Pursuit ***********");
