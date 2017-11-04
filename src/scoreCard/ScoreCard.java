@@ -6,7 +6,6 @@ import java.util.Map.Entry;
 public class ScoreCard {
 	
 	private HashMap<Integer,Integer> scoreCard = new  HashMap<Integer,Integer>();
-
 	
 	public ScoreCard() {
 		scoreCard.put(1, 0);
@@ -20,4 +19,12 @@ public class ScoreCard {
 		scoreCard.put(category, scoreCard.get(category) + 1);
 	}
 	
+	public boolean checkScore() {
+		for(int i: scoreCard.values()) {
+			if (i < 3) {
+				return false;
+			};
+		}
+		return true;
+	}
 }
