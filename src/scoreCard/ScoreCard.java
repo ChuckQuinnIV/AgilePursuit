@@ -6,8 +6,15 @@ import java.util.Map.Entry;
 public class ScoreCard {
 	
 	private HashMap<Integer,Integer> scoreCard = new  HashMap<Integer,Integer>();
+	private String groupName = ""; 
 	
-	public ScoreCard() {
+	public String getGroupName() {
+		return groupName;
+	}
+
+	public ScoreCard(String groupName) {
+		super();
+		this.groupName = groupName;
 		scoreCard.put(1, 0);
 		scoreCard.put(2, 0);
 		scoreCard.put(3, 0);
