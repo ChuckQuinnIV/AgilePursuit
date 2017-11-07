@@ -34,4 +34,16 @@ public class ScoreCard {
 		}
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		String str =  String.format("|%-15s|\n", "SCORECARD");
+		str +=  String.format("|%-15s|\n", groupName);;
+		str += String.format("|%-8s|%-6s|\n", "Category", "Points");
+		for (Entry<Integer, Integer> entry : scoreCard.entrySet()) {
+			str += String.format("|%-8d|%-6d|\n", entry.getKey(), entry.getValue());
+		}
+		return str;
+	}
+
 }
