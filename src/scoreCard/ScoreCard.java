@@ -6,12 +6,8 @@ import java.util.Map.Entry;
 public class ScoreCard {
 	
 	private HashMap<Integer,Integer> scoreCard = new  HashMap<Integer,Integer>();
-	private String groupName = ""; 
+	private String groupName; 
 	
-	public String getGroupName() {
-		return groupName;
-	}
-
 	public ScoreCard(String groupName) {
 		super();
 		this.groupName = groupName;
@@ -22,6 +18,10 @@ public class ScoreCard {
 		scoreCard.put(-1, 0);
 	}
 	
+	public String getGroupName() {
+		return groupName;
+	}
+	
 	public void addPoint(int category){
 		scoreCard.put(category, scoreCard.get(category) + 1);
 	}
@@ -30,7 +30,7 @@ public class ScoreCard {
 		for(int i: scoreCard.values()) {
 			if (i < 3) {
 				return false;
-			};
+			}
 		}
 		return true;
 	}
