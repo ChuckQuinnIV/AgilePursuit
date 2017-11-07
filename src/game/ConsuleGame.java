@@ -15,9 +15,10 @@ import questions.Question;
 public class ConsuleGame {
 
 	private static Game game = new Game();
+	private static Play play = null;
 
 	public static boolean askQuestion() {
-		Question q = game.getQuestion();
+		Question q = play.getQuestion();
 		System.out.println("CATEGORY: " + q.getCategory());
 		System.out.println(q.getQuestion());
 		int i = 0;
@@ -45,7 +46,7 @@ public class ConsuleGame {
 			e.printStackTrace();
 		}
 		boolean correct = false;
-		if (q.check(answer)){
+		if (play.checkAnswer(answer)){
 			System.out.println("[Correct] - YOU GOT IT RIGHT!!!");
 			correct = true;
 		} else{ 
@@ -111,19 +112,17 @@ public class ConsuleGame {
 		String g1 = sc.nextLine();
 		System.out.print("Enter Group2's Name: ");
 		String g2 = sc.nextLine();
-
-		String turn = null;
-		while (! game.isGameOver()) {
-			if (game.getTurnCount() % 2 == 0){
-				System.out.println("------- Round: " + game.getRound() + " -------");
-				turn = g1;
-			} else {
-				turn = g2;
-			}
-			System.out.println("Its " + turn + "'s turn!");
+		
+		play = game.play(g1, g2);
+		
+		boolean display = true;
+		
+		while (! play.isGameOver()) {
+			System.out.println("---------- Round-" + play.getRound() + ": " +play.whoseTurn() + "'s turn! ----------");
 			askQuestion();
+			System.out.print("\n" + play.getStringScoreCard());
 			try {
-				TimeUnit.SECONDS.sleep(2);
+				TimeUnit.SECONDS.sleep(3);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

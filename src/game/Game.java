@@ -1,41 +1,20 @@
 package game;
 
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
-
 import group.Group;
 import group.GroupMgr;
 import player.Player;
 import player.PlayerMgr;
-import questions.Question;
-import questions.QuestionStack;
 
 public class Game {
 
-	private QuestionStack Questions = QuestionStack.getInstance();
 	private PlayerMgr Players = new PlayerMgr();
 	private GroupMgr Groups = new GroupMgr();
 	private int round = 1;
 	private int turnCount = 0;
 
-
-	public int getTurnCount() {
-		return turnCount;
-	}
-	
-	public int getRound() {
-		return round;
-	}
 	
 	public void addPlayer(String username) throws IOException{
 		Player p = new Player(username);
@@ -64,16 +43,8 @@ public class Game {
 		Players.saveFile();
 	}
 	
-	public boolean isGameOver(){
-		if (Questions.size() == 0) {return true;}
-		else if (round > 40) {return true;}
-		return false;
-	}
-
-	public Question getQuestion(){
-		turnCount++;
-		if (turnCount % 2 == 1){ round++;};
-		return Questions.pop();
+	public Play play(String g1, String g2){
+		return new Play(g1, g2);
 	}
 
 }
