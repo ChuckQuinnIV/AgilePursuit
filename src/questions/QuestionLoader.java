@@ -33,7 +33,7 @@ public class QuestionLoader {
 		JSONParser parser = new JSONParser();
 		JSONObject jsonObject = null;
 		try {
-			jsonObject = (JSONObject) parser.parse(new FileReader("./src/test.json"));
+			jsonObject = (JSONObject) parser.parse(new FileReader("./src/questions.json"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
