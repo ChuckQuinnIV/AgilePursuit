@@ -41,7 +41,6 @@ public class Play {
 	}
 	
 	public Question getQuestion(){
-		turnCount++;
 		if (turnCount % 2 == 0){round++;};
 		currQuestion = Questions.pop();
 		currCategory = currQuestion.getCategory();
@@ -49,8 +48,10 @@ public class Play {
 	}
 	
 	public boolean checkAnswer(String answer){
+		String group = whoseTurn();
+		turnCount++;
 		if (currQuestion.check(answer)){
-			ScoreCardMgr.addPoint(whoseTurn(), currCategory);
+			ScoreCardMgr.addPoint(group, currCategory);
 			return true;
 		} else {
 			return false;
