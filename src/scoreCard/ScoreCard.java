@@ -26,7 +26,7 @@ public class ScoreCard {
 		scoreCard.put(category, scoreCard.get(category) + 1);
 	}
 	
-	public boolean checkScore() {
+	public boolean isWinner() {
 		for(int i: scoreCard.values()) {
 			if (i < 3) {
 				return false;

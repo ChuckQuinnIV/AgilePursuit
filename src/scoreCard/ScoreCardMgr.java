@@ -27,10 +27,58 @@ public class ScoreCardMgr {
 		return str;
 	}
 	
+	public String getWinner(String g1, String g2) {
+		ScoreCard team1 = scoreCardMgr.get(g1);
+		ScoreCard team2 = scoreCardMgr.get(g2);
+		
+		boolean g1win = team1.isWinner();
+		boolean g2win = team2.isWinner();
+		String winner;
+		
+		if (g1win && !g2win) {winner = "g1";}
+		else if (!g1win && g2win) {winner = "g2";}
+		else {winner = "no winner";}
+		
+		return winner;
+	}
 	
 	public static void main(String[] args) {
 		ScoreCardMgr sc = new ScoreCardMgr("g1","g2");
 		System.out.println(sc);
+		
+		sc.addPoint("g1", 1);
+		sc.addPoint("g1", 1);
+		sc.addPoint("g1", 1);
+		sc.addPoint("g1", 2);
+		sc.addPoint("g1", 2);
+		sc.addPoint("g1", 2);
+		sc.addPoint("g1", 3);
+		sc.addPoint("g1", 3);
+		sc.addPoint("g1", 3);
+		sc.addPoint("g1", 4);
+		sc.addPoint("g1", 4);
+		sc.addPoint("g1", 4);
+		sc.addPoint("g1", -1);
+		sc.addPoint("g1", -1);
+		//sc.addPoint("g1", -1);
+		
+		sc.addPoint("g2", 1);
+		sc.addPoint("g2", 1);
+		sc.addPoint("g2", 1);
+		sc.addPoint("g2", 2);
+		sc.addPoint("g2", 2);
+		sc.addPoint("g2", 2);
+		sc.addPoint("g2", 3);
+		sc.addPoint("g2", 3);
+		sc.addPoint("g2", 3);
+		sc.addPoint("g2", 4);
+		sc.addPoint("g2", 4);
+		sc.addPoint("g2", 4);
+		sc.addPoint("g2", -1);
+		sc.addPoint("g2", -1);
+		sc.addPoint("g2", -1);
+		
+		System.out.println(sc.getWinner("g1", "g2"));
 	}
 
 	

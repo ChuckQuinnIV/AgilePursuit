@@ -61,7 +61,12 @@ public class Play {
 	public boolean isGameOver(){
 		if (Questions.size() == 0) {return true;}
 		else if (round > 40) {return true;}
+		else if (ScoreCardMgr.getWinner(g1, g2) != "no winner") {return true;}
 		return false;
+	}
+	
+	public String winner(){
+		return ScoreCardMgr.getWinner(g1, g2);
 	}
 	
 	public String getStringScoreCard(){
