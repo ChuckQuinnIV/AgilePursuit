@@ -5,8 +5,12 @@ import java.util.HashMap;
 public class ScoreCardMgr {
 
 	private HashMap<String,ScoreCard> scoreCardMgr = new  HashMap<String,ScoreCard>();
+	String g1;
+	String g2;
 
 	public ScoreCardMgr(String g1, String g2){
+		this.g1 = g1;
+		this.g2 = g2;
 		scoreCardMgr.put(g1, new ScoreCard(g1));
 		scoreCardMgr.put(g2, new ScoreCard(g2));
 	}
@@ -27,18 +31,16 @@ public class ScoreCardMgr {
 		return str;
 	}
 	
-	public String getWinner(String g1, String g2) {
+	public String getWinner() {
 		ScoreCard team1 = scoreCardMgr.get(g1);
 		ScoreCard team2 = scoreCardMgr.get(g2);
-		
 		boolean g1win = team1.isWinner();
 		boolean g2win = team2.isWinner();
 		String winner;
 		
 		if (g1win && !g2win) {winner = "g1";}
 		else if (!g1win && g2win) {winner = "g2";}
-		else {winner = "no winner";}
-		
+		else {winner = null;}
 		return winner;
 	}
 	
@@ -78,7 +80,7 @@ public class ScoreCardMgr {
 		sc.addPoint("g2", -1);
 		sc.addPoint("g2", -1);
 		
-		System.out.println(sc.getWinner("g1", "g2"));
+		System.out.println(sc.getWinner());
 	}
 
 	
