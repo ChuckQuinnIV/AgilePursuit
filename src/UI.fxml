@@ -115,7 +115,7 @@
 
             <Label GridPane.rowIndex="1" fx:id="testResponse" />
             <!--Progress sets it, otherwise it shows essentially a loading icon. Can make dynamic if showing exact time keeping is important. progress:0.6-->
-            <ProgressIndicator id="timer" prefWidth="100" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="2"/>
+            <ProgressIndicator fx:id="progressIndicator" id="timer" prefWidth="100" prefHeight="100"  GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="2"/>
         </GridPane>
     </bottom>
 
