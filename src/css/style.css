@@ -15,6 +15,9 @@
     -fx-font-size:50;
     -fx-font-weight:700;
 }
+#startGame {
+    -fx-margin-bottom: 20;
+}
 #timer {
     -fx-progress-color: teal;
 }

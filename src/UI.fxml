@@ -14,7 +14,7 @@
             fx:controller="UIController" >
     <top>
         <HBox id="topBox" alignment="TOP_CENTER">
-            <Text id="mainTitle" textAlignment="CENTER">
+            <Text fx:id="mainTitle" id="mainTitle" textAlignment="CENTER">
                 AGILE TRIVIAL PURSUIT
             </Text>
         </HBox>
@@ -22,7 +22,7 @@
     <!--Team 1 area-->
     <left>
         <VBox id="leftBox"  styleClass="answerRegion" alignment="TOP_CENTER">
-            <Text styleClass="teamName" textAlignment="CENTER">Team Name</Text>
+            <Text styleClass="teamName" textAlignment="CENTER" fx:id="teamOne">Team Name</Text>
             <GridPane id="team1-response"
                       prefHeight="300.0" prefWidth="100.0" hgap="10" vgap="10" alignment="TOP_CENTER">
                 <!--Category 1-->
@@ -56,7 +56,7 @@
     <!--Team 2 area-->
     <right>
         <VBox id="rightBox" styleClass="answerRegion" alignment="TOP_CENTER">
-            <Text styleClass="teamName" textAlignment="CENTER">Team WOOHOO</Text>
+            <Text styleClass="teamName" textAlignment="CENTER" fx:id="teamTwo">Team WOOHOO</Text>
             <GridPane id="team2-response"
                       prefHeight="300.0" prefWidth="100.0" hgap="10" vgap="10" alignment="TOP_CENTER">
                 <!--Category 1-->
@@ -92,11 +92,15 @@
     <center>
         <GridPane id="selectCategory"
                   prefHeight="500.0" prefWidth="300.0" hgap="10" vgap="10" alignment="CENTER">
-            <ListView>
-                <Text>Test 0</Text>
-                <Text>Test 1</Text>
-                <Text>Test 2</Text>
-            </ListView>
+            <!--<ListView>-->
+                <!--<Text>Test 0</Text>-->
+                <!--<Text>Test 1</Text>-->
+                <!--<Text>Test 2</Text>-->
+            <!--</ListView>-->
+
+            <Text GridPane.rowIndex="0" GridPane.columnIndex="0"> CATEGORY: </Text>
+            <Text fx:id="category" GridPane.rowIndex="0" GridPane.columnIndex="1"></Text>
+            <Button fx:id="startGame" alignment="TOP_CENTER" onAction="#startGame" GridPane.rowIndex="1" GridPane.columnIndex="0">Start</Button>
         </GridPane>
 
     </center>
@@ -106,12 +110,13 @@
                 prefHeight="200.0" prefWidth="1000.0" hgap="10" vgap="10" alignment="BASELINE_LEFT">
 
 
-            <Text GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3" id="answer-header" textAlignment="CENTER">What is the Agile Model?</Text>
+            <Text fx:id="question" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3" id="answer-header" textAlignment="CENTER">What is the Agile Model?</Text>
 
-            <Button text="Answer 1" onAction="#setResponse" fx:id="button1" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="500"/>
-            <Button text="Answer 2" onAction="#setResponse" fx:id="button2" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="500"/>
-            <Button text="Answer 3" onAction="#setResponse" fx:id="button3" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="500"/>
-            <Button text="Answer 4" onAction="#setResponse" fx:id="button4" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="500"/>
+            <!--Temporary handler-->
+            <Button text="Answer 1" onAction="#answerChoice" fx:id="button0" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Answer 2" onAction="#answerChoice" fx:id="button1" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="500"/>
+            <Button text="Answer 3" onAction="#answerChoice" fx:id="button2" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Answer 4" onAction="#answerChoice" fx:id="button3" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="500"/>
 
             <Label GridPane.rowIndex="1" fx:id="testResponse" />
             <!--Progress sets it, otherwise it shows essentially a loading icon. Can make dynamic if showing exact time keeping is important. progress:0.6-->

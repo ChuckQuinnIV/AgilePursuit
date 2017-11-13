@@ -26,7 +26,7 @@ public class UIManager extends Application{
 
 //		setQuestionArea();
 
-		Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("StartView.fxml"));
 
 		scene = new Scene(root, 1200, 800);
 

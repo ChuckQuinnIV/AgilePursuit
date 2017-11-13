@@ -6,9 +6,44 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
+            stylesheets="css/style.css"
+            fx:controller="StartController" >
+    <top>
+        <HBox id="topBox" alignment="TOP_CENTER">
+            <Text fx:id="test" id="mainTitle" textAlignment="CENTER">
+                Welcome to Agile Pursuit
+            </Text>
+        </HBox>
+    </top>
+    <!--Team 1 area-->
+    <left>
+    </left>
+    <!--Team 2 area-->
+    <right>
+    </right>
+    <center>
+        <GridPane
+                id="a-grid"
+                prefHeight="200.0" prefWidth="1000.0" hgap="10" vgap="10" alignment="BASELINE_LEFT">
 
-</AnchorPane>
+
+            <Text GridPane.rowIndex="0" fx:id="startScreenTitle" GridPane.columnIndex="0" GridPane.columnSpan="3" id="answer-header" textAlignment="CENTER">Choose your Option!</Text>
+
+            <Button text="Start Game" onAction="#handleMenuChoice" fx:id="start" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="List Groups" onAction="#handleMenuChoice" fx:id="groups" styleClass="q-btn" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="500"/>
+            <Button text="List Players" onAction="#handleMenuChoice" fx:id="players" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Create Player" onAction="#handleMenuChoice" fx:id="createP" styleClass="q-btn" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="500"/>
+            <Button text="Create Group" onAction="#handleMenuChoice" fx:id="createG" styleClass="q-btn" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="500"/>
+            <Button text="Add Player" onAction="#handleMenuChoice" fx:id="addP" styleClass="q-btn" GridPane.rowIndex="3" GridPane.columnIndex="2" prefWidth="500"/>
+
+        </GridPane>
+
+    </center>
+    <bottom>
+
+    </bottom>
+
+</BorderPane>
