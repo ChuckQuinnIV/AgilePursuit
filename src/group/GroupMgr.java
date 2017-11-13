@@ -48,26 +48,16 @@ public class GroupMgr implements Serializable{
 		}
 	}
 	
-	// TODO: WE NEED TO REMOVE THIS LATER!!!!!!!! 	
-	public void clear() {
-		allGroups.clear();
-	}
-	
 	public void deleteGroup(String id) {
 		allGroups.remove(id);
 	}
 	
 	@SuppressWarnings("unchecked")
 	private HashMap<String, Group> readFile()  {
-		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
-			return (HashMap<String, Group>) is.readObject();
-		} catch (FileNotFoundException e) {
-			return new HashMap<String, Group>();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {return (HashMap<String, Group>) is.readObject();} 
+		catch (FileNotFoundException e) {return new HashMap<String, Group>();} 
+		catch (IOException e) {e.printStackTrace();} 
+		catch (ClassNotFoundException e) {e.printStackTrace();}
 		return null;
 	}
 	
@@ -78,8 +68,6 @@ public class GroupMgr implements Serializable{
 
 	public void addPlayer(String p, String groupname) {
 		allGroups.get(groupname).addPlayer(p);
-		//just for testing purposes
-		System.out.println("\nPlayer " + p + "added to " + allGroups.get(groupname).getGroupName());
 	}
 }
 

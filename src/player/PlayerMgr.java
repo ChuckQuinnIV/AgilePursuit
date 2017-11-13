@@ -10,6 +10,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
+import org.junit.Ignore;
+
 public class PlayerMgr implements Serializable{
 		
 	private static final long serialVersionUID = 1L;
@@ -45,32 +47,21 @@ public class PlayerMgr implements Serializable{
 			os.writeObject(allPlayers);
 		}
 	}
-	// TODO: WE NEED TO REMOVE THIS LATER!!!!!!!! 
-	public void clear() {
-		allPlayers.clear();
-	}
 	
-	public void deletePlayer(int id) {
+	public void deletePlayer(String id) {
 		allPlayers.remove(id);
 	}
 	
 	@SuppressWarnings("unchecked")
 	private HashMap<String, Player> readFile()  {
-		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
-			return (HashMap<String, Player>) is.readObject();
-		} catch (FileNotFoundException e) {
-			return new HashMap<String,Player>();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) { return (HashMap<String, Player>) is.readObject();}
+		catch (FileNotFoundException e) {return new HashMap<String,Player>();} 
+		catch (IOException e) {e.printStackTrace();} 
+		catch (ClassNotFoundException e) {e.printStackTrace();}
 		return null;
 	}
-	
 	@Override
 	public String toString() {
 		return allPlayers.toString();
 	}
-	
 }
