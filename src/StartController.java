@@ -24,10 +24,7 @@ public class StartController {
 
 
     public void initialize() {
-        // Don't call this on initialize, call whenever new question gets asked
-//        timer();
-//        playGame();
-//        test.setText("Set from Con");
+
     }
 
     @FXML

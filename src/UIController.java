@@ -62,10 +62,7 @@ public class UIController {
 
     // Does stuff onload
     public void initialize() {
-        // Don't call this on initialize, call whenever new question gets asked
-//        timer();
         setTeams();
-//        playGame();
     }
 
     private void timer() {
