@@ -1,0 +1,329 @@
+{
+	"questions": 
+	[
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Which of the following best describes the 'Cone of Uncertainty?'",
+			"choices": 
+			{
+				"Another name for the Waterfall model": false,
+				"We never know exactly what we're building until later on in a project": false,
+				"A software delivery model that emphasizes iterative and incremental development": false,
+				"The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Which of the following IS NOT an agile principle?",
+			"choices": 
+			{
+				"The highest priority is to satisfy customers through early and continuous delivery of valuable software": false,
+				"Welcome changing requirements, even late in development": false,
+				"Business people and developers must work together daily throughout the project": false,
+				"The most efficient and effective method of conveying information to and within a development team is through electronic means such as email and shared wiki pages": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Repeated cycles during which a system is changed incrementally",
+			"choices": 
+			{
+				"Cone of Uncertainty": false,
+				"The Software Development Iron Triangle": false,
+				"Spiral Model": false,
+				"Iteration": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Small additions or changes to a system's capabilities",
+			"choices": 
+			{
+				"The Software Development Iron Triangle": false,
+				"Spiral Model": false,
+				"Present Value": false,
+				"Increment": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "The value of an investment's future earnings in today's money",
+			"choices": 
+			{
+				"Spiral Model": false,
+				"Waterfall Model": false,
+				"Boehm's Curve": false,
+				"Present Value": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "The present value of an investment's earnings less the investment itself",
+			"choices": 
+			{
+				"Present Value": false,
+				"Waterfall Model": false,
+				"Boehm's Curve": false,
+				"Net Present Value": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Traditionally time, cost, and quality were variable while scope was immutable",
+			"choices": 
+			{
+				"Waterfall Model": false,
+				"Boehm's Curve": false,
+				"Increment": false,
+				"The Software Development Iron Triangle": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "A cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required",
+			"choices": 
+			{
+				"Increment": false,
+				"Iteration": false,
+				"Net Present Value": false,
+				"Boehm's Curve": true
+			}
+		},
+
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "Early delivery of business value",
+			"choices": 
+			{
+				"Cone of Uncertainty": false,
+				"The Software Development Iron Triangle": false,
+				"Spiral Model": false,
+				"Agile": true
+			}
+		},
+		
+		{
+			"category": 1,
+			"type": "multiple",
+			"question": "A software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete",
+			"choices": 
+			{
+				"The Software Development Iron Triangle": false,
+				"Spiral Model": false,
+				"Present Value": false,
+				"Waterfall Model": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Demonstrate the work that was completed and discuss the work that was planned but not completed",
+			"choices": 
+			{
+				"Sprint Planning": false,
+				"Daily Scrum": false,
+				"Scrum of Scrums": false,
+				"Sprint Review": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Activities include defining the sprint goal, selecting stories from the product backlog, estimating those stories, and communicating how much work the team thinks can be completed during the sprint.",
+			"choices": 
+			{
+				"Daily Scrum": false,
+				"Scrum of Scrum": false,
+				"Backlog Grooming": false,
+				"Sprint Planning": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Answers the questions: what went well and what could be improved.",
+			"choices": 
+			{
+				"Sprint Planning": false,
+				"Daily Scrum": false,
+				"Scrum of Scrum": false,
+				"Sprint Retrospective": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Answers the questions: what have you done since yesterday, what will you do today, do you have any obstacles?",
+			"choices": 
+			{
+				"Sprint Planning": false,
+				"Scrum of Scrum": false,
+				"Backlog Grooming": false,
+				"Daily Scrum": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Answers the questions: what has your team done since we last met, what will your team do before we next meet, is there anything slowing your team down, and are you about to slow another team down?",
+			"choices": 
+			{
+				"Daily Scrum": false,
+				"Backlog Grooming": false,
+				"Sprint Review": false,
+				"Scrum of Scrum": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "Includes activities like refining acceptance criteria, and splitting or merging stories",
+			"choices": 
+			{
+				"Sprint Planning": false,
+				"Daily Scrum": false,
+				"Scrum of Scrum": false,
+				"Backlog Grooming": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "A fictitious character who is a typical example of someone who plays one or more user roles",
+			"choices": 
+			{
+				"Job": false,
+				"Compensating Behavior": false,
+				"Coevolution": false,
+				"Persona": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "A process where research and development happen concurrently; the two feed off of one another",
+			"choices": 
+			{
+				"Job": false,
+				"Compensating Behavior": false,
+				"User Role": false,
+				"Coevolution": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "The fundamental problem that a customer needs to resolve in a given situation",
+			"choices": 
+			{
+				"Compensating Behavior": false,
+				"Coevolution": false,
+				"User Role": false,
+				"Job": true
+			}
+		},
+		
+		{
+			"category": 2,
+			"type": "multiple",
+			"question": "A collection of concerns and behaviors of a particular kind of user. It will have capabilities within an application",
+			"choices": 
+			{
+				"Job": false,
+				"Compensating Behavior": false,
+				"Coevolution": false,
+				"User Role": true
+			}
+		},
+		
+		{
+			"category": -1,
+			"type": "multiple",
+			"question": "A collection of concerns and behaviors of a particular kind of user. It will have capabilities within an application",
+			"choices": 
+			{
+				"Job": false,
+				"Compensating Behavior": false,
+				"Coevolution": false,
+				"User Role": true
+			}
+		},
+		
+		{
+			"category": -1,
+			"type": "multiple",
+			"question": "A behavior performed to compensate for the deficiencies in, or results of, another behavior",
+			"choices": 
+			{
+				"Coevolution": false,
+				"User Role": false,
+				"Persona": false,
+				"Compensating Behavior": true
+			}
+		},
+		
+		{
+			"category": -1,
+			"type": "multiple",
+			"question": "A software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback",
+			"choices": 
+			{
+				"Present Value": false,
+				"Waterfall Model": false,
+				"Boehm's Curve": false,
+				"Spiral Model": true
+			}
+		},
+		
+		{
+			"category": -1,
+			"type": "multiple",
+			"question": "Describes how uncertainty in project plans directly relates to the number of unknowns, and hence the risks, in the project",
+			"choices": 
+			{
+				"Present Value": false,
+				"Waterfall Model": false,
+				"Boehm's Curve": false,
+				"Cone of Uncertainty": true
+			}
+		},
+		
+		{
+			"category": -1,
+			"type": "multiple",
+			"question": "The combination of group id, artifact id, and version is called an artifact's what?",
+			"choices": 
+			{
+				"Resolvable name": false,
+				"Tuple": false,
+				"Dependency": false,
+				"Coordinates": true
+			}
+		}
+	]
+}
